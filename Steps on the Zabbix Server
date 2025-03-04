@@ -1,0 +1,5 @@
+1. Copy the Script to Zabbix Alert Scripts Directory:
+sudo cp socket_client.py /usr/lib/zabbix/alertscripts/
+2. Grant Execute Permissions to the Script:
+sudo chmod +x /usr/lib/zabbix/alertscripts/socket_client.py
+sudo chown zabbix:zabbix /usr/lib/zabbix/alertscripts/socket_client.py
