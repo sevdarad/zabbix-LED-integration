@@ -1,0 +1,27 @@
+1. Now, it's time to add this script as a Media Type in Zabbix.
+
+Steps:
+
+    Go to the Zabbix UI.
+    Navigate to Administration → Media types.
+    Click on Create media type.
+2. Media Type Configuration:
+
+    Name: Socket Script Execution
+    Type: Script
+    Script name: socket_client.py
+3. Create an Action to Use the Media Type:
+
+Now, create an Action that will use this Media Type.
+
+Steps:
+
+    Go to Configuration → Actions.
+    Click on Create action.
+4. Action Configuration:
+
+    Name: Execute Socket Script on Event
+    Conditions: (This depends on the conditions you want to set)
+    Operations:
+        Send to: Socket Script Execution (the Media Type you created)
+        Default message: Check the box
