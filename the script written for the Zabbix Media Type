@@ -1,0 +1,20 @@
+Here is the script written for the Zabbix Media Type:
+#!/usr/bin/python3
+import socket
+
+HOST = '192.168.31.75'  
+PORT = 50007
+
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect((HOST, PORT))
+
+message = "255.0.0"  
+client_socket.sendall(message.encode())
+
+data = client_socket.recv(1024)
+print(f"server_Response: {data.decode()}")
+
+client_socket.close()
+
+This script connects to a server (at 192.168.31.75 on port 50007) and sends a message ("255.0.0", which likely represents a color or alert code for the LED). After sending the message, the script waits for a response from the server and then prints it before closing the connection.
+The script can be modified to work with Zabbix by integrating it into a custom Media Type that triggers when an alert occurs.
