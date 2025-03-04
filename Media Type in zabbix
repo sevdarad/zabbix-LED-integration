@@ -1,0 +1,17 @@
+In Zabbix, a Media Type refers to the method or channel used for sending alerts and notifications. In other words, the Media Type determines how and through what means the alert message is delivered to the user. Zabbix has several default media types for sending alerts, such as email, SMS, or voice messages. However, you can also create custom media types to suit your specific needs.
+How to Set Up a Media Type in Zabbix:
+
+To add a new Media Type, you can follow these steps:
+
+    Go to the Administration section: From the Zabbix menu, go to the Administration tab.
+
+    Manage Media Types: From the left-hand menu, select Media types. Here, you can view and manage existing media types or add new ones.
+
+    Add a New Media Type: To create a new media type, click on the Create media type button and enter the necessary configurations.
+
+Types of Media Types:
+
+    Email: Sends an email to one or more email addresses.
+    SMS: Sends a text message to specified phone numbers.
+    Script: Executes a custom script or program (for example, running a Python script to control an LED).
+    Webhook: Sends an HTTP request to a specified URL to integrate with other systems.
